@@ -21,6 +21,10 @@ public class SnakeLadder {
 			if (option == IS_LADDER) {
 				System.out.println("Ladder for the Player");
 				playerPosition+=diceNumber;
+				//if player position moves above 100, then the player moves to previous position
+				if (playerPosition>WIN_POSITION){
+					playerPosition-=diceNumber;
+				}
 			} else if (option == IS_SNAKE) {
 				System.out.println("Snake for the Player");
 				playerPosition-=diceNumber;
