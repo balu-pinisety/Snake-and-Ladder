@@ -10,9 +10,12 @@ public class SnakeLadder {
 		int IS_LADDER=2;
 		//Variable
 		int playerPosition=START_POSITION;
+		int diceCount=0;
 		
 		//Repeating till the Player reaches the winning position
 		while(playerPosition<WIN_POSITION){
+			//incremanting the dice count
+			++diceCount;
 			//Using random to get Dice number 
 			int diceNumber = (int) (Math.floor(Math.random()*10)%6)+1;
 			System.out.println("Dice number is "+diceNumber);
@@ -38,5 +41,6 @@ public class SnakeLadder {
 			//Printing Player Postion
 			System.out.println("Player position is now "+playerPosition);
 		}
+		System.out.println("Dice was rolled "+diceCount+" times to reach the Winning position");
 	}
 }
